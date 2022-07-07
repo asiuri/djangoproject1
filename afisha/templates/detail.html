@@ -1,0 +1,11 @@
+{% extends%}
+<h2>Title:{{movie_detail.name}}}</h2>
+<p>Description:{{movie_detail.description}}</p>
+<p>Created Date:{{movie_detail.created_at}}</p>
+<hr/>
+<h3>All reviews</h3>
+{% for review in movie_detail.reviews.all%}
+    <p>{{review.text}}</p>
+    <p>{{review.author}}</p>
+    <hr>
+{% endfor %}
